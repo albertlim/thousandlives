@@ -4,7 +4,8 @@ angular.module('thousandlivesApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'writeModule'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -19,6 +20,10 @@ angular.module('thousandlivesApp', [
       .when('/signup', {
         templateUrl: 'partials/signup',
         controller: 'SignupCtrl'
+      })
+      .when('/write', {
+        templateUrl: 'partials/write',
+        controller: 'writeCtrl',
       })
       .when('/settings', {
         templateUrl: 'partials/settings',

@@ -2,6 +2,11 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-image: url("/images/self-publishing.jpg");
+}
+
+a{
+	color:white;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -34,7 +39,7 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 930px;
   }
 }
 .container-narrow > hr {
