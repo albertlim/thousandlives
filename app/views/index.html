@@ -14,6 +14,8 @@
     <!-- build:css(app) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/medium-editor/dist/css/medium-editor.css" />
+    <link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -32,11 +34,24 @@
         <div id="shelf-1" snap-drawer="" class="snap-drawer snap-drawer-left">
 			<main-left-panel></main-left-panel>
         </div>
+       
+    </div>
+    
+    
+    <div class="snap-drawers">
+        <div id="shelf-2" snap-drawer="right" class="snap-drawer snap-drawer-right">
+            <main-right-panel></main-right-panel>
+        </div>
     </div>
     <div> 
     <!-- Add your site or application content here -->
     <div id="content" class="scrollable snap-content" snap-content snap-options="snapOpts" style>
-    <div class="container" ng-view="" ></div>
+    <div ng-include="'partials/navbar'"></div>
+    	<div class="site-wrapper-inner">
+            <div class="main-canvas row row-offcanvas row-offcanvas-right">
+                <div class="container" ng-view="" ></div>
+            </div>
+        </div>
 	</div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -64,9 +79,10 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/medium-editor/dist/js/medium-editor.js"></script>
-    <script src="bower_components/angular-medium-editor/dist/angular-medium-editor.min.js"></script>
-    <script src="bower_components/snapjs/snap.min.js"></script>
-    <script src="bower_components/angular-snap/angular-snap.min.js"></script>
+    <script src="bower_components/medium-editor/dist/js/medium-editor.min.js"></script>
+    <script src="bower_components/angular-medium-editor/angular-medium-editor.js"></script>
+    <script src="bower_components/snapjs/snap.js"></script>
+    <script src="bower_components/angular-snap/angular-snap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

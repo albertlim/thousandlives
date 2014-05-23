@@ -26,11 +26,11 @@ angular.module('thousandlivesApp', [
         templateUrl: 'partials/write',
         controller: 'writeCtrl',
       })
-      .when('/settings', {
+    /*  .when('/settings', {
         templateUrl: 'partials/settings',
         controller: 'SettingsCtrl',
         authenticate: true
-      })
+      })*/
       .otherwise({
         redirectTo: '/'
       });
@@ -66,4 +66,9 @@ angular.module('thousandlivesApp', [
 	        restrict: "E",
 	        templateUrl: "views/partials/panels/mainLeftPanel.html"
       }
-  });
+  }).directive("mainRightPanel", function(){
+	  return {
+	        restrict: "E",
+	        templateUrl: "views/partials/panels/mainRightPanel.html"
+    }
+});

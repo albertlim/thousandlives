@@ -45,21 +45,62 @@ a{
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 930px;
+    width: 100%;
   }
+  
+  div.main-canvas{
+  	margin:auto;
+  	padding: 10px;
+    background: rgba(225,225,225, 0.5);
+  }
+  
    #content{
        background-image: url("/images/self-publishing.jpg");
        box-shadow: 0 0 20px #888;
    }
 }
+
+li.selected{
+    border-bottom: 1px solid white;
+}
+
+.nav > li.selected > a{
+	font-weight:900;	
+}
+
+.nav > li{
+	width:100px;
+	text-align:center;
+}
+
+ul.nav {
+	max-width:650px;
+	margin:auto;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus{
+	background-color:inherit;
+	color:white;
+	font-weight:900;
+}
+
+.nav > li > a{
+	
+font-family: Geneva,Verdana,sans-serif;
+	background-color:inherit;
+	font-weight:500;
+	
+}
 .container-narrow > hr {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
+/* Main marketing message and sign up  button */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background-color:transparent;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -85,10 +126,34 @@ a{
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    overflow:hidden;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  
+  .list-group{
+  	margin-top:30px;
+  }
+  .list-group a{
+  	font-size:1.2em;
+  	font-weight:bold;
+  	padding-left:20px;
+  	border: 0px none;
+  }
+  
+  .btn{
+  	width:100%;
+  	font-weight:900;
+  	color:white;
+  }
+  
+  
+  .container .list-group a{
+  background: rgba(250,250,250,0.5);
+  height:55px;
   }
 }
