@@ -1,13 +1,16 @@
 <div ng-include="'partials/navbar'"></div>
 
-<div ng-app="writeModule">
-<form name="writeForm" ng-controller="writeCtrl" ng-submit="addWriting()">
-<div ng-click="pop()">asdkfja;lsdjf;alsdf</div>
-    <fieldset class="form-group">
-        <textarea ng-model="writeCtrl.writing.body" class="form-control" placeholder="From my mind..." title="Review"></textarea>
-    </fieldset>
-    <fieldset class="form-group">
-        <input type="submit" class="btn btn-primary pull-right" value="Submit Writing" />
-  </fieldset>
-</form>
+<div ng-app="writeModule" >
+ 
+    <h1 ng-model="title" medium-editor options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'></h1>
+    <p ng-model="description" medium-editor options='{"placeholder": "Enter a description", "buttons": ["bold", "italic", "underline", "anchor", "header1", "header2", "quote", "orderedlist", "unorderedlist"]}'></p>
+    
+   <h1 class="editable" contenteditable="true" data-placeholder="Type your text" data-medium-element="true">
+        </h1> 
+    <script>var editor = new MediumEditor('.editable');</script>
+    
+   
+<button snap-toggle="left">Toggle Snap</button>
+</div> 
+
 </div>

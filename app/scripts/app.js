@@ -5,7 +5,8 @@ angular.module('thousandlivesApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'writeModule'
+  'writeModule',
+  'snap'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -60,4 +61,9 @@ angular.module('thousandlivesApp', [
         $location.path('/login');
       }
     });
+  }).directive("mainLeftPanel", function(){
+	  return {
+	        restrict: "E",
+	        templateUrl: "views/partials/panels/mainLeftPanel.html"
+      }
   });

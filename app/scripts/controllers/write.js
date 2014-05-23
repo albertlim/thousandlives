@@ -1,16 +1,24 @@
-  var write = angular.module('writeModule', []);
-  
-  write.controller('writeCtrl', function( $scope){
-	  
-	  $scope.addWriting = function(){
+(function() {  
+    var write = angular.module('writeModule', ['angular-medium-editor']);
+      
+      write.controller('writeCtrl', function( $scope){
+    	  $scope.snapOpts = {
+    		      disable: 'right'
+    		    };
 
-		alert('asdfasdf');
-	  };
-	  
-	  $scope.pop = function(){
-		  alert('ddddddddd');
-	  }
-  
-  });
-  
+          $scope.addWriting = function(){
+
+          };
+          
+      
+      });
+      
+      write.directive("writePage", function(){
+    	  return{
+    		  restrict: 'E',
+    		  templateUrl:"views/partials/writePage.html"
+    	  };
+    	  
+      });
+})(); 
   
