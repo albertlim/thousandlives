@@ -1,16 +1,21 @@
-<div class="list-group ">
-    <a href="#" class=" list-group-item">
-        <span class="glyphicon glyphicon-camera"></span> Pictures <span class="badge">25</span>
-    </a>
-    <a href="#" class="list-group-item ">
-        <h4 class="list-group-item-heading"></h4>
-        <span class="glyphicon glyphicon-file"></span> Documents <span class="badge">145</span>
-    </a>
-    <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading"></h4>
-        <span class="glyphicon glyphicon-music"></span> Music <span class="badge">50</span>
-    </a>
+<div ng-controller="CollapseDemoCtrl" class="list-group ">
+    <div ng-repeat="book in authorWorks" href="#" class=" list-group-item">
+    	<div ng-click="isCollapsed = !isCollapsed" > 
+            <span class="glyphicon glyphicon-book"></span>
+            <div class="left-panel-book-name" >
+                    {{book.name}}
+            </div>
+            <span class="badge">{{book.chapters.length}}</span>
+        </div>
+        <div collapse="isCollapsed">
+            <div ng-repeat="singleChapter in book.chapters">
+                <a href="#" class="list-group-item left-panel-chapter">
+                    {{singleChapter.name}}
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-          <button class="btn " snap-close="">Done</button>
-          </div>
+<div class="panel-button-container">
+    <button class="btn " snap-close="">Done</button>
+</div>

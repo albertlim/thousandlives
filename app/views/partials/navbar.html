@@ -1,12 +1,39 @@
-<div class="header" ng-controller="NavbarCtrl" style="margin-top:25px;">
-  <ul class="nav nav-pills span12">
-    <li ng-repeat="item in menu" ng-class="{selected: isActive(item.link)}">
-        <a ng-href="{{item.link}}">{{item.title}}</a>
-    </li>
-    <li ng-hide="currentUser" ng-class="{selected: isActive('/write')}"><a href="/write">Write</a></li>
-    <li ng-hide="currentUser" ng-class="{selected: isActive('/login')}"><a href="/login">Login</a></li>
-    <li ng-hide="currentUser" ng-class="{selected: isActive('/signup')}"><a href="/signup">Sign up</a></li>
-    <li ng-show="currentUser" ng-class="{selected: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
-  </ul>
-  <h3 class="text-muted"></h3>
+<div class="header" style="padding-top:15px;" ng-controller="NavbarCtrl" >
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">{{item.title}}</a>
+            </div>
+            <div>
+                
+                <div class="navbar-collapse  pull-right collapse">
+                  <form class="navbar-form navbar-right" role="form">
+                    <div class="form-group">
+                      <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                  </form>
+                  
+                    <ul class="nav nav-tabs span12 pull-right" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}">
+                    <li ng-hide="currentUser" ng-class="{active: isActive('/')}"><a href="/">Home</a></li>
+                    <li ng-hide="currentUser" ng-class="{active: isActive('/write')}"><a href="/write">Write</a></li>
+                    <li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
+                    <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+                </ul>
+                </div><!--/.navbar-collapse -->
+              
+            </div>
+        </div>
+    </div>
+ 
+    <h3 class="text-muted"></h3>
 </div>

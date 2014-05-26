@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Azurite",
+        "description": "A long time ago on a planet far far away",
+        "subscribe": 110.5,
+        "author_id": 7,
+        "author_name": "Kyan Towzen",
+        "chapters": [
+            {
+                "name": "Light and Pancakes",
+                "chapter_id": 1
+            },
+            {
+                "name": "Sausage, really? ",
+                "chapter_id": 2
+            },
+            {
+                "name": "Black Stars",
+                "chapter_id": 3
+            }
+        ]
+    },
+    {
+        "name": "Sapphire 1",
+        "description": "Sapphires weren't exactly cheap back then either",
+        "subscribe": 110.5,
+        "author_id": 7,
+        "author_name": "Ilfay Onren",
+        "chapters": [
+            {
+                "name": "Drums and Dust",
+                "chapter_id": 1
+            },
+            {
+                "name": "Silent Cannons",
+                "chapter_id": 2
+            },
+            {
+                "name": "Generational Rift",
+                "chapter_id": 3
+            }
+        ]
+    },
+    {
+        "name": "Krypto Given Currency",
+        "description": "Because sometimes you need a little more than 12x12 icons for your projects.",
+        "subscribe": 110.5,
+        "author_id": 7,
+        "author_name": "T. L. Maelester",
+        "chapters": [
+            {
+                "name": "Since you've been here",
+                "chapter_id": 1
+            },
+            {
+                "name": "Hey Jude",
+                "chapter_id": 2
+            },
+            {
+                "name": "Just another story",
+                "chapter_id": 3
+            }
+        ]
+    }
+]

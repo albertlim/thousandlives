@@ -6,6 +6,7 @@ angular.module('thousandlivesApp', [
   'ngSanitize',
   'ngRoute',
   'writeModule',
+  'ui.bootstrap',
   'snap'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
@@ -61,6 +62,19 @@ angular.module('thousandlivesApp', [
         $location.path('/login');
       }
     });
+  }).controller('CollapseDemoCtrl', function($scope) {
+	  $scope.isCollapsed = false;
+  
+  }).controller('TabsDemoCtrl', function($scope){
+	  
+	  $scope.tabs = [
+	                 { title:'Home', navigation:'/' },
+	                 { title:'Write', navigation:'/write'},
+	                 { title:'Login', navigation:'/login'},
+	                 { title:'Register', navigation:'/signup'},
+	                 { title:'Logout', navigation:'logout'},
+	               ];
+	  
   }).directive("mainLeftPanel", function(){
 	  return {
 	        restrict: "E",
@@ -69,6 +83,17 @@ angular.module('thousandlivesApp', [
   }).directive("mainRightPanel", function(){
 	  return {
 	        restrict: "E",
-	        templateUrl: "views/partials/panels/mainRightPanel.html"
+	        templateUrl: "views/partials/panels/mainRightPanel.html",
+	        controller: function($http, $filter, $scope) {
+	            var info = this;
+	            $scope.authorWorks;
+	            $http.get('test/book_data.json').success(function(data){
+	            	$scope.authorWorks= data;
+	            });
+	            
+	            this.setCurrent = function(imageNumber){
+	              this.current = imageNumber || 0;
+	            };
+	          },
     }
 });

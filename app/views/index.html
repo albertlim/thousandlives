@@ -48,8 +48,7 @@
     <div id="content" class="scrollable snap-content" snap-content snap-options="snapOpts" style>
     <div ng-include="'partials/navbar'"></div>
     	<div class="site-wrapper-inner">
-            <div class="main-canvas row row-offcanvas row-offcanvas-right">
-                <div class="container" ng-view="" ></div>
+            <div class="main-canvas row row-offcanvas row-offcanvas-right" ng-view="">
             </div>
         </div>
 	</div>
@@ -83,6 +82,7 @@
     <script src="bower_components/angular-medium-editor/angular-medium-editor.js"></script>
     <script src="bower_components/snapjs/snap.js"></script>
     <script src="bower_components/angular-snap/angular-snap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -91,7 +91,8 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/navbar.js"></script>
         <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/controllers/write.js"></script>
+        <script src="scripts/modules/main-left-panel.js"></script>
+        <script src="scripts/modules/write.js"></script>
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/settings.js"></script>
         <script src="scripts/services/auth.js"></script>

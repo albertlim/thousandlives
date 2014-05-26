@@ -1,7 +1,15 @@
 (function() {  
     var write = angular.module('writeModule', ['angular-medium-editor']);
       
-      write.controller('writeCtrl', function( $scope){
+      write.controller('writeCtrl', ['$http', '$scope', function($http, $scope){
+
+    	  $scope.write={};
+    	  $scope.save = function(){
+    		  if($scope.write.chapter){
+    			  $http.put('/asdf/asdfa/sdf');
+    		  }
+    	  };
+    	  
     	  $scope.snapOpts = {
     		      disable: 'right'
     		    };
@@ -11,7 +19,7 @@
           };
           
       
-      });
+      }]);
       
       write.directive("writePage", function(){
     	  return{
