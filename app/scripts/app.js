@@ -7,6 +7,7 @@ angular.module('thousandlivesApp', [
   'ngRoute',
   'writeModule',
   'ui.bootstrap',
+  'ui.slimscroll',
   'snap'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {

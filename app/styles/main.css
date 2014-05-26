@@ -159,7 +159,7 @@ button.publish-btn{
   /* Remove the bottom border on the jumbotron for visual effect */
   .my-jumbotron {
     border-bottom: 0;
-    max-width: 770px;
+    max-width: 970px;
     margin: auto;
     padding-top:30px;
   }

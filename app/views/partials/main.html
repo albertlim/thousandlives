@@ -1,18 +1,19 @@
-
-
-
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <div class="my-jumbotron">
-            <div class="row marketing">
-              <div ng-repeat="thing in awesomeThings">
-                  <h4>{{thing.name}}</h4>
-                  <p>{{thing.info}}</p>
-              </div>
+<p class="pull-right visible-xs">
+	<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+</p>
+<div class="my-jumbotron" >
+    <div class="row marketing">
+        <div ng-repeat="thing in awesomeThings">
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">{{thing.name}}</h4>
+                    <p class="list-group-item-text">{{thing.info}}</p>
+                </a>
             </div>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
+        </div>
+    </div>
+    <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+</div>
         
 
 
