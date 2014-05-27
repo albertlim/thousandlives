@@ -8,13 +8,15 @@ angular.module('thousandlivesApp', [
   'writeModule',
   'ui.bootstrap',
   'ui.slimscroll',
-  'snap'
+  'snap',
+  'mainLeftPanelModule',
+  'mainHomePage',
+  'readerSubscriptionModule'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/main',
-        controller: 'MainCtrl'
+        templateUrl: 'partials/main'
       })
       .when('/login', {
         templateUrl: 'partials/login',
@@ -63,9 +65,6 @@ angular.module('thousandlivesApp', [
         $location.path('/login');
       }
     });
-  }).controller('CollapseDemoCtrl', function($scope) {
-	  $scope.isCollapsed = false;
-  
   }).controller('TabsDemoCtrl', function($scope){
 	  
 	  $scope.tabs = [
@@ -78,23 +77,12 @@ angular.module('thousandlivesApp', [
 	  
   }).directive("mainLeftPanel", function(){
 	  return {
-	        restrict: "E",
-	        templateUrl: "views/partials/panels/mainLeftPanel.html"
-      }
+            restrict: "E",
+            templateUrl: "views/partials/panels/mainLeftPanel.html"
+      };
   }).directive("mainRightPanel", function(){
 	  return {
 	        restrict: "E",
-	        templateUrl: "views/partials/panels/mainRightPanel.html",
-	        controller: function($http, $filter, $scope) {
-	            var info = this;
-	            $scope.authorWorks;
-	            $http.get('test/book_data.json').success(function(data){
-	            	$scope.authorWorks= data;
-	            });
-	            
-	            this.setCurrent = function(imageNumber){
-	              this.current = imageNumber || 0;
-	            };
-	          },
-    }
+	        templateUrl: "views/partials/panels/mainRightPanel.html"
+    };
 });

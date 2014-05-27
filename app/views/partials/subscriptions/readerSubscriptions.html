@@ -1,0 +1,14 @@
+<div id="mainReaderSubscriptions">
+    <div ng-app="readerSubscriptionModule" >
+        <div ng-controller="readerSubscribedController">
+            <div class="list-group">
+                <div ng-repeat="book in subscriptions" href="#" class=" list-group-item">
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">{{book.name}} - <span style="font-size:0.7em;">{{book.author}}</span></h4>
+                        <p class="list-group-item-text">{{book.latestChapterName}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

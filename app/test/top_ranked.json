@@ -1,0 +1,40 @@
+{
+  "bookList": [
+   {
+        "name": "Children of the Mind",
+        "bookId": 1, 
+        "latestChapterName" : "A New Bean",
+        "chapterNumber": 5,
+        "chapterId" :1,
+        "subscriptions" : 4321,
+        "currentViewers" : 545,
+        "releaseDate" : "5-28-2014",
+        "rating" : 9.9,
+        "author": "Ender Wiggins"
+   },
+   {
+        "name": "Beans story",
+        "bookId": 2,
+        "latestChapterName" : "Bean Bean",
+        "chapterNumber": 3,
+        "chapterId" :2,
+        "subscriptions" : 21321,
+        "currentViewers" : 5645,
+        "releaseDate" : "5-29-2014",
+        "rating" : 9.1,
+        "author": "J. R. R Tamel"
+   },
+   {
+        "name": "A Walk of Winter",
+        "bookId": 3,
+        "latestChapterName" : "Unfair but fair",
+        "chapterNumber": 15,
+        "chapterId" : 3,
+        "subscriptions" : 14321,
+        "currentViewers" : 345,
+        "releaseDate" : "5-27-2014",
+        "rating" : 9.3,
+        "author": "G. R. R. Marlin"
+    }
+  ]
+}

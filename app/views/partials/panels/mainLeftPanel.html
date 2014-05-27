@@ -1,23 +1,27 @@
-<div ng-controller="CollapseDemoCtrl" class="list-group ">
-    <div class="scroll-body" slimscroll slimscroll-option="alwaysVisible">
-        <div ng-repeat="book in authorWorks" href="#" class=" list-group-item">
-            <div ng-click="isCollapsed = !isCollapsed" > 
-                <span class="glyphicon glyphicon-book"></span>
-                <div class="left-panel-book-name" >
-                        {{book.name}}
+<div id="leftPanelSlim">
+    <div ng-app="mainLeftPanelModule" >
+        <div ng-controller="leftPanelController">
+            <div ng-controller="CollapseDemoCtrl" class="list-group ">
+                <div ng-repeat="book in authorWorks" href="#" class=" list-group-item">
+                    <div ng-click="isCollapsed = !isCollapsed" > 
+                        <span class="glyphicon glyphicon-book"></span>
+                        <div class="left-panel-book-name" >
+                                {{book.name}}
+                        </div>
+                        <span class="badge">{{book.chapters.length}}</span>
+                    </div>
+                    <div collapse="isCollapsed">
+                        <div ng-repeat="singleChapter in book.chapters">
+                            <a href="#" class="list-group-item left-panel-chapter">
+                                {{singleChapter.name}}
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <span class="badge">{{book.chapters.length}}</span>
             </div>
-            <div collapse="isCollapsed">
-                <div ng-repeat="singleChapter in book.chapters">
-                    <a href="#" class="list-group-item left-panel-chapter">
-                        {{singleChapter.name}}
-                    </a>
-                </div>
-            </div>
+        <div class="panel-button-container">
+            <button class="btn " snap-close="">Done</button>
         </div>
     </div>
-    <div class="panel-button-container">
-        <button class="btn " snap-close="">Done</button>
-    </div>
+</div>
 </div>

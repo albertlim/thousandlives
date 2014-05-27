@@ -47,7 +47,7 @@
     <!-- Add your site or application content here -->
     <div id="content" class="scrollable snap-content" snap-content snap-options="snapOpts" style>
     <div ng-include="'partials/navbar'"></div>
-    	<div slimscroll class="site-wrapper-inner">
+    	<div class="site-wrapper-inner">
             <div class="main-canvas row row-offcanvas row-offcanvas-right" ng-view="">
             </div>
         </div>
@@ -83,10 +83,10 @@
     <script src="bower_components/snapjs/snap.js"></script>
     <script src="bower_components/angular-snap/angular-snap.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="bower_components/angular-slimscroll/angular-slimscroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+      <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -95,6 +95,7 @@
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/modules/main-left-panel.js"></script>
         <script src="scripts/modules/write.js"></script>
+        <script src="scripts/modules/subscription.js"></script>
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/settings.js"></script>
         <script src="scripts/services/auth.js"></script>
